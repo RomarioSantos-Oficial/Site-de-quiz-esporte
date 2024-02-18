@@ -152,8 +152,8 @@ main{
 /* Estilos para o botão "Próxima Pergunta" */
 .next-button {
     margin-top: 10px; /* Adiciona margem acima do botão */
-    background-color: #4CAF50; /* Cor de fundo verde */
-    color: white; /* Cor do texto branco */
+    background-color: #e70909; /* Cor de fundo verde */
+    color: rgb(0, 0, 0); /* Cor do texto branco */
     border: none; /* Remove a borda */
     border-radius: 5px; /* Adiciona borda arredondada */
     transition: background-color 0.3s; /* Adiciona transição suave para a mudança de cor de fundo */
@@ -161,7 +161,7 @@ main{
 
 /* Estilos de hover para o botão "Próxima Pergunta" */
 .next-button:hover {
-    background-color: #07350a; /* Altera a cor de fundo ao passar o mouse */
+    background-color: #e6352f; /* Altera a cor de fundo ao passar o mouse */
 }
 
 
