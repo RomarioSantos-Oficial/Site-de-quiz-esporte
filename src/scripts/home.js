@@ -13,8 +13,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Adiciona um ouvinte de evento para o clique em qualquer lugar na página
     document.addEventListener('click', handleUserClick);
 });
-
-
-function redirecionarParaOutraPagina(pagina) {
-    window.location.href = pagina;
-}

@@ -12,8 +12,6 @@
     <title>Home</title>
 </head>
 <body>
-
-    
     <header>
         <div class="interface">
             <div class="logo">
@@ -40,7 +38,7 @@
     <main>
         <div class="Quiz-Copa">
             <div class="game1">
-                <img class="game-casine" src="../assets/images/copa.png" onclick="redirecionarParaOutraPagina('../pages/game1.html')">
+                <img class="game-casine" src="../assets/images/copa.gif" onclick="redirecionarParaOutraPagina('/src/html/quiz-da-copa.html')">
             </div>
         </div>
 
@@ -52,17 +50,21 @@
 
         <div class="Quiz-Copa">
             <div class="game3">
-                <img class="game-casine" src="../assets/images/cori.png" onclick="redirecionarParaOutraPagina('../pages/game3.html')">
+                <img class="game-casine" src="../assets/images/corinthians.png" onclick="redirecionarParaOutraPagina('../pages/game3.html')">
             </div>
         </div>
 
         <!-- Adicione mais blocos semelhantes para outros jogos -->
 
     </main>
-    <script type="module" src="/src/scripts/home.js"></script>
+    <script type="module" src="../scripts/home.js"></script>
     <audio loop>
         <audio id="victoryMusic" src="/src/assets/audio/Hayya Hayya.mp3"></audio>
     </audio> 
-
+<script>
+function redirecionarParaOutraPagina(pagina) {
+    window.location.href = pagina;
+}
+</script>
 </body>
 </html>
