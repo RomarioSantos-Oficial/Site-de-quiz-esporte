@@ -1,19 +1,6 @@
-import { playNextMusic } from './musicPlayer.js';
 
-// Função para lidar com o clique do usuário e iniciar a reprodução da música
-function handleUserClick() {
-    // Chama a função playNextMusic para iniciar a reprodução da próxima música
-    playNextMusic();
-    // Remove o ouvinte de evento de clique após a primeira interação do usuário
-    document.removeEventListener('click', handleUserClick);
-}
-
-// Adiciona um ouvinte de evento para quando o conteúdo da página é completamente carregado
-document.addEventListener('DOMContentLoaded', function() {
-    // Adiciona um ouvinte de evento para o clique em qualquer lugar na página
-    document.addEventListener('click', handleUserClick);
-});
-
+// Adiciona um evento de clique ao documento para iniciar a reprodução da playlist
+document.addEventListener('click', startPlaylistOnClick);
 const input = document.querySelector('.login__input');
 const button = document.querySelector('.login__button');
 const form = document.querySelector('.login-form')
@@ -37,3 +24,47 @@ const handleSubmit = (event) => {
 
 input.addEventListener('input', validateInput);
 form.addEventListener('submit', handleSubmit);
+
+
+// Lista de URLs das músicas
+const musicList = [
+    './src/assets/audio/pais do futebol.mp3',
+    './src/assets/audio/Shakia 2010 copa.mp3',
+    './src/assets/audio/Live It Up.mp3',
+    './src/assets/audio/Hayya Hayya.mp3',
+    // Adicione mais URLs de músicas conforme necessário
+];
+
+// Função para criar um elemento de áudio
+function createAudioElement() {
+    const audioElement = new Audio();
+    // Define o volume para 20%
+    audioElement.volume = 0.2;
+    return audioElement;
+}
+
+// Função para reproduzir a próxima música na lista
+function playNextMusic() {
+    // Obtém uma música aleatória da lista
+    const randomIndex = Math.floor(Math.random() * musicList.length);
+    const randomMusic = musicList[randomIndex];
+
+    // Cria um novo elemento de áudio
+    const audioElement = createAudioElement();
+    // Define a música selecionada como a origem do elemento de áudio
+    audioElement.src = randomMusic;
+
+    // Adiciona um evento de 'ended' ao elemento de áudio para tocar a próxima música quando a atual terminar
+    audioElement.addEventListener('ended', playNextMusic);
+
+    // Inicia a reprodução da música
+    audioElement.play();
+}
+
+// Função para iniciar a reprodução da playlist quando qualquer parte da página for clicada
+function startPlaylistOnClick() {
+    // Remove o evento de clique após o início da reprodução da playlist para evitar repetições
+    document.removeEventListener('click', startPlaylistOnClick);
+    // Inicia a reprodução da playlist
+    playNextMusic();
+}
