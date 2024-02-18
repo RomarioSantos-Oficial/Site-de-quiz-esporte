@@ -2,7 +2,7 @@ const musicList = [
     '/src/assets/audio/pais do futebol.mp3',
     '/src/assets/audio/Shakia 2010 copa.mp3',
     '/src/assets/audio/Live It Up.mp3',
-    '/src/assets/audio/audio/Hayya Hayya.mp3',
+    '/src/assets/audio/Hayya Hayya.mp3',
     // Adicione mais URLs de músicas conforme necessário
 ];
 
@@ -22,4 +22,4 @@ function playNextMusic() {
     audioElement.play();
 }
 
-export { musicList, playNextMusic };
+export { playNextMusic };

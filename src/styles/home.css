@@ -76,22 +76,29 @@ main{
     width: 80%;
 }
 
-main .Quiz-Copa {
+.Quiz-Copa {
     width: 80%;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-    aspect-ratio: 9/16; /* Define a proporção 9:16 */
+    aspect-ratio: 10/20; /* Define a proporção 9:16 */
 }
 
-main .Quiz-Copa img {
+.Quiz-Copa img {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Mantém a proporção da imagem */
+   
 }
 
-main .Quiz-Copa:hover {
-    transform: scale(1.05);
+.Quiz-Copa:hover,
+.Quiz-Copa:focus,
+.Quiz-Copa:active {
+    transition: transform 0.5s ease; /* Define a transição de transformação */
+    transform: scale(1.15);
+}
+.Quiz-Copa:not(:hover){
+    transition: transform 0.5s ease; /* Adiciona transição lenta quando o mouse sai de cima da imagem */
 }
 
 .game-casine{
