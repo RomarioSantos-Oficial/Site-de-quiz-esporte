@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/home.css">
+
+    <link rel="shortcut icon" href="../assets/icons/channels4_profile-removebg-preview.png" type="image/x-icon">
+
+    <title>Home</title>
+</head>
+<body>
+
+    
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="../assets/icons/channels4_profile-removebg-preview.png" alt="logo do site">
+                </a>
+            </div>
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Jogos</a></li>
+                    <li><a href="#">Termo de Serviços</a></li>
+                    <li><a href="#">Sobre</a></li>
+                </ul>
+            </nav>
+            <div class="btn-contato">
+                <a href="#">
+                    <button>Contato</button>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="Quiz-Copa">
+            <div class="game1">
+                <img class="game-casine" src="../assets/images/copa.png" onclick="redirecionarParaOutraPagina('../pages/game1.html')">
+            </div>
+        </div>
+
+        <div class="Quiz-Copa">
+            <div class="game2">
+                <img class="game-casine" src="../assets/images/Flamengo.png" onclick="redirecionarParaOutraPagina('../pages/game2.html')">
+            </div>
+        </div>
+
+        <div class="Quiz-Copa">
+            <div class="game3">
+                <img class="game-casine" src="../assets/images/cori.png" onclick="redirecionarParaOutraPagina('../pages/game3.html')">
+            </div>
+        </div>
+
+        <!-- Adicione mais blocos semelhantes para outros jogos -->
+
+    </main>
+    <script type="module" src="/src/scripts/home.js"></script>
+    <audio loop>
+        <audio id="victoryMusic" src="/src/assets/audio/Hayya Hayya.mp3"></audio>
+    </audio> 
+
+</body>
+</html>
