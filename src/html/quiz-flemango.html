@@ -17,7 +17,7 @@
 <body>
     <header class="inicio">
         <div>
-            <img class="logo" src="../assets/icons/channels4_profile-removebg-preview.png" alt="logo do site">
+            <img class="logo" src="../assets/icons/channels4_profile-removebg-preview.png" alt="logo do site" onclick="redirecionarParaOutraPagina('./home.html')">
         </div>
         <div>
             <h1>Quis Sobre o Flamango!</h1>
@@ -26,7 +26,7 @@
             <nav id="mainNav">
                 <ul>
                     <li><h4>Perfil</h4></li>
-                    <!-- <li><h4>Sobre</h4></li> -->
+                    <li><h4 onclick="redirecionarParaOutraPagina('./sobre.html')">Sobre</h4></li>
                     <li><h4>Sair</h4></li>
                 </ul>
             </nav>
@@ -61,6 +61,9 @@
     <script type="module" src="../scripts/engine.js" defer></script>
     <script src="../scripts/questionario-fla.js" defer></script>
 </body>
-
-
+<script>
+    function redirecionarParaOutraPagina(pagina) {
+        window.location.href = pagina;
+    }
+    </script>
 </html>

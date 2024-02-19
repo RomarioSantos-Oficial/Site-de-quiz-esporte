@@ -3,11 +3,6 @@ body{
     height: 100vh;
 }
 
-.interface{
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
 /* estilo do cabeçalho */
 
 
@@ -42,9 +37,9 @@ header a:hover{
     transform: scale(1.02);
 }
 
-/* header nav ul {
+header nav ul {
     list-style-type: none;
-} */
+}
 
 header nav ul li{
     display: inline-block;
@@ -81,6 +76,10 @@ main {
     width: 80%;
     margin: auto;  
     margin-top: 50px; /* Adiciona espaço entre o cabeçalho e o conteúdo principal */
+}
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
 }
 .Quiz-Copa {
     width: 90%;
