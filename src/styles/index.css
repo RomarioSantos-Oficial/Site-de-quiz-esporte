@@ -1,17 +1,17 @@
-body{
+body {
     background-color: #1b1b1b;
     height: 100vh;
 }
 
-.login-form{
+.login-form {
     align-items: center;
- display: flex;
- flex-direction: column;
- height: 100vh;
- justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
 }
 
-.login__header{
+.login__header {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -28,8 +28,8 @@ body{
     font-size: 3.5em;
 }
 
-.login__input{
-    border:  2px solid #000;
+.login__input {
+    border: 2px solid #000;
     border-radius: 8px;
     color: #000;
     font-size: 2rem;
@@ -40,17 +40,20 @@ body{
     width: 100%;
 }
 
-.login__button{
+.signup-link {
+    margin-bottom: 15px; /* Adiciona espaço entre o link de cadastro e o botão de login */
+}
+
+.login__button {
     background-color: aqua;
     border-radius: 8px;
     color: black;
     cursor: pointer;
-    font-size:  2em;
+    font-size: 2em;
     max-width: 300px;
     padding: 15px;
     width: 100%;
 }
-
 
 .login__button:disabled {
     background-color: #eee;
