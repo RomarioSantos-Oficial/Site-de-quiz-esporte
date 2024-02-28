@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+    <link rel="shortcut icon" href="../assets/icons/channels4_profile-removebg-preview.png" type="image/x-icon">
+</head>
+<body>
+
+    <header class="inicio">
+        <div>
+            <img class="logo" src="../assets/icons/channels4_profile-removebg-preview.png" alt="logo do site" onclick="redirecionarParaOutraPagina('./home.html')">
+        </div>
+        <div>
+            <h1>Perfil do jogador!</h1>
+        </div>
+        <div id="menuToggle" style="margin-right: 30px;">
+            <nav id="mainNav">
+                <ul>
+                    <li><h4 onclick="redirecionarParaOutraPagina('./sobre.html')">Sobre</h4></li>
+                    <li><h4 onclick="redirecionarParaOutraPagina('/index.html')">Sair</h4 ></li>
+    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+         <!-- Perfil do Usuário -->
+    <div id="profile">
+        <div class="profile__header">
+            <h1>Perfil do Jogador</h1>
+        </div>
+        
+        <div class="profile__info">
+            <input type="file" accept="image/*" id="fileInput" style="display: none;">
+            <button id="chooseImageButton">Escolher Imagem</button>
+            <img src="" alt="Foto do jogador" id="profilePicture">
+            <h2 id="username"></h2>
+        </div>
+    </div>
+    </main>
+    
+   
+
+    <script src="../scripts/Perfil.js" defer ></script>
+
+    <audio loop>
+        <audio id="victoryMusic" src="../assets/audio/Live It Up.mp3"></audio>
+    </audio> 
+</body>
+
+<script>
+    function redirecionarParaOutraPagina(pagina) {
+        window.location.href = pagina;
+    }
+    </script>
+
+</html>
