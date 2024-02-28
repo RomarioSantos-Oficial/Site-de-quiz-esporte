@@ -25,13 +25,13 @@
                 <a href="#" id="signupLink">Cadastre-se</a>
             </div>
             
-            <button type="button" class="login__button" onclick="logar()">Login</button>
+            <button type="submit" class="login__button">Login</button>
         </form>
     </div>
     
     <!-- Tela de Cadastro -->
     <div id="cadastro" style="display: none;">
-        <form class="login-form">
+        <form class="login-form" onsubmit="cadastrar(); return false;">
             <div class="login__header">
                 <h1>Cadastro - Quiz de Esportes</h1>
                 <img src="./src/assets/icons/channels4_profile-removebg-preview.png" alt="logo do site">
@@ -41,14 +41,14 @@
             <input type="date" placeholder="Data de Nascimento" class="login__input" id="birthdateInput">
             <input type="password" placeholder="Senha (mínimo 4 caracteres)" class="login__input" id="passwordInput">
             
-            <button type="button" class="login__button" onclick="cadastrar()">Cadastrar</button>
+            <button type="submit" class="login__button">Cadastrar</button>
         </form>
     </div>
 
-    <script type="module" src="./src/scripts/index.js" defer></script>
     <audio loop>
         <audio id="victoryMusic" src="./src/assets/audio/Hayya Hayya.mp3"></audio>
     </audio> 
 
+<script src="/index.js"></script>
 </body>
 </html>
